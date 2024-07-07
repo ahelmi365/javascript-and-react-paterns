@@ -1,3 +1,4 @@
+console.log("hello from singletonCounter");
 let instance = null;
 
 class Counter {
