@@ -37,7 +37,7 @@ const userProxy = new Proxy(user, {
         return true;
       }
     }
-
+    console.log("Successfully updated");
     return Reflect.set(target, prop, value);
   },
 });
