@@ -1,8 +1,8 @@
 // using the Singleton Counter by class
-import singletonCounter from "./singletonCounter.mjs";
+import singletonCounter from "./singletonCounter.js";
 
 // using the Singleton Counter by Object
-// import singletonCounter from "./singletonCounterObj.mjs";
+// import singletonCounter from "./singletonCounterObj.js";
 
 const countSpan = document.getElementById("count");
 countSpan.textContent = singletonCounter.getCount();

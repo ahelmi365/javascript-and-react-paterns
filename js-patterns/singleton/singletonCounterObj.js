@@ -1,4 +1,4 @@
-console.log("hello from singletonCounterObj.mjs");
+console.log("hello from singletonCounterObj.js");
 let counter = 0;
 
 const counterObj = {
