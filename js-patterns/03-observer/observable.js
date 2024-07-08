@@ -4,18 +4,20 @@ const Observable = {
     console.log({ observers });
     observers.forEach((observer) => observer(data));
   },
-  subscribe: (func) => {
-    if (observers.includes(func)) {
-      return;
+  subscribe: (observer) => {
+    if (observers.includes(observer)) {
+      return console.log("Observer has been attached already.");
     }
-    observers.push(func);
+    observers.push(observer);
+    console.log("Attached an observer.");
   },
-  unsubscript: (func) => {
-    [...observers].forEach((observer, index) => {
-      if (observer === func) {
-        observers.splice(index, 1);
-      }
-    });
+  unsubscript: (observer) => {
+    const observerIndex = observers.indexOf(observer);
+    if (observerIndex === -1) {
+      return console.log("Nonexistent observer.");
+    }
+    observers.splice(observerIndex, 1);
+    console.log("Detached an observer.");
   },
 };
 

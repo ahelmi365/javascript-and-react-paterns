@@ -1,6 +1,6 @@
 import Observable from "./observable.js";
-import "./loggers.js";
-import { loggerFour } from "./loggers.js";
+import "./observers.js";
+import { observerFour } from "./observers.js";
 const notifyBtn = document.getElementById("notify");
 const subscribeBtn = document.getElementById("subscribe");
 const unsubscribeBtn = document.getElementById("unsubscribe");
@@ -10,8 +10,8 @@ notifyBtn.addEventListener("click", () => {
 });
 
 subscribeBtn.addEventListener("click", () => {
-  Observable.subscribe(loggerFour);
+  Observable.subscribe(observerFour);
 });
 unsubscribeBtn.addEventListener("click", () => {
-  Observable.unsubscript(loggerFour);
+  Observable.unsubscript(observerFour);
 });
